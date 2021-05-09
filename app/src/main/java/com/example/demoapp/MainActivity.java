@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -24,6 +27,7 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.Calendar;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
@@ -62,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         Dataref = FirebaseDatabase.getInstance().getReference().child("Report");
         StorageRef = FirebaseStorage.getInstance().getReference().child("ReportImage");
 
+
+        //image selection button
         imageViewAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //upload button
         btnUpload.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -84,6 +92,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        //date picker using Edit Text
+        inputdate.setInputType(InputType.TYPE_NULL);
+        inputdate.setOnClickListener(v -> {
+            final Calendar cldr = Calendar.getInstance();
+            int day = cldr.get(Calendar.DAY_OF_MONTH);
+            int month = cldr.get(Calendar.MONTH);
+            int year = cldr.get(Calendar.YEAR);
+            // date picker dialog
+            DatePickerDialog picker = new DatePickerDialog(MainActivity.this,
+                    (view, year1, monthOfYear, dayOfMonth) -> inputdate.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year1), year, month, day);
+            picker.show();
+        });
+
+
     }
 
     private void uploadImage(final String title,final String date) {

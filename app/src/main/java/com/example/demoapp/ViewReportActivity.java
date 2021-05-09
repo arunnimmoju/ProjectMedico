@@ -6,9 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -28,6 +32,7 @@ public class ViewReportActivity extends AppCompatActivity {
     Button btnDelete;
     DatabaseReference ref,DataRef;
     StorageReference StorageRef;
+    boolean isImageFitToScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,9 +85,6 @@ public class ViewReportActivity extends AppCompatActivity {
 
             }
         });
-
-
-
 
     }
 }
