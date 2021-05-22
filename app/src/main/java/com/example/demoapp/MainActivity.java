@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -19,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -52,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
+
 
         imageViewAdd= findViewById(R.id.ImageViewAdd);
         inputTitle= findViewById(R.id.edit_title);
@@ -129,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(MainActivity.this,"Data Successfully Uploaded ",Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(),ReportListActivity.class));
+                                startActivity(new Intent(getApplicationContext(),HomeActivity.class));
                             }
                         });
                     }
@@ -156,5 +164,30 @@ public class MainActivity extends AppCompatActivity {
             isImageAdded = true;
             imageViewAdd.setImageURI(imageUri);
         }
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id= item.getItemId();
+        switch (id){
+            case R.id.logout:{
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                break;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 }

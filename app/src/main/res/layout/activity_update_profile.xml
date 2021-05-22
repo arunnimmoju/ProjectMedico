@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".updateProfileActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageCardview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="70dp"
+        app:cardElevation="5dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/userImage"
+            android:src="@drawable/ic_upload_image"
+            android:adjustViewBounds="true"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editText1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageCardview"
+       >
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/updateName"
+            android:inputType="text"
+            android:maxLines="1"
+            android:hint="@string/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinner1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        >
+        <AutoCompleteTextView
+            android:id="@+id/updateGender"
+            android:layout_width="match_parent"
+            android:hint="@string/gender"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editText2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editText1"
+        >
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/updateAge"
+            android:maxLines="1"
+            android:hint="@string/age"
+            android:maxLength="2"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editText3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/spinner1"
+        >
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/updateHeight"
+            android:maxLines="1"
+            android:hint="@string/height_in_cm"
+            android:maxLength="4"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editText4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/spinner1"
+        >
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/updateWeight"
+            android:maxLines="1"
+            android:hint="@string/weight_in_kg"
+            android:maxLength="4"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editText6"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editText4"
+        >
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/updatePhone"
+            android:maxLines="1"
+            android:hint="Contact No."
+            android:maxLength="10"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editText5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/spinner2"
+        >
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/updateOccupation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/occupation"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinner2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText3"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        >
+        <AutoCompleteTextView
+            android:id="@+id/updateBp"
+            android:layout_width="match_parent"
+            android:hint="@string/bp"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/updateDetails"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/submit_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/editText5"
+        android:text="@string/submit"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+
+        <TextView
+            android:fontFamily="@font/montserrat_alternates"
+            android:textAllCaps="true"
+            android:textColor="#424242"
+            android:id="@+id/userTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:text="@string/hi_arun"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:columnCount="2"
+            android:rowCount="2">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/healthReport"
+                    app:cardElevation="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="10sp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="10sp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/icon"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/shape_primary"
+                                    android:padding="10dp"
+                                     />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="HEALTH REPORT"
+                                    android:textAllCaps="true"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/updateReport"
+                    app:cardElevation="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="10sp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="10sp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/icon2"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/shape2"
+                                    android:padding="10dp"
+                                     />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="UPDATE REPORTS"
+                                    android:textAllCaps="true"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/viewReport"
+                    app:cardElevation="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="10sp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="10sp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/icon3"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/shape3"
+                                    android:padding="10dp"
+                                     />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="VIEW REPORTS"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textAllCaps="true"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bmiCalculator"
+                    app:cardElevation="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="10sp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="10sp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/icon4"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/shape4"
+                                    android:padding="10dp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="102dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="BMI Calculator"
+                                    android:textAllCaps="true"
+                                    android:maxLines="1"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+
+
+
+
+
+</LinearLayout>

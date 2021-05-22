@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthReportActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageCardview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="70dp"
+        app:cardElevation="5dp">
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/sample_user_image" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/editProfile"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageCardview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Edit Profile" />
+
+    <TextView
+        android:id="@+id/viewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editProfile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="@string/arun_kumar_chary"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="GENDER : "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/viewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewName"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/gender"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="Male"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/AGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewName"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/viewAge"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="AGE : "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/viewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="50"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewAge"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="HEIGHT : "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/viewHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewAge"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/height"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="156"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewAge"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/viewWeight"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="WEIGHT : "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/viewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewAge"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="50"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/bp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewWeight"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="Blood Pressure : "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/viewBp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewWeight"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/Occupation"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="120"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/Occupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="OCCUPATION : "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/viewOccupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/Occupation"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="Worker"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Occupation"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="Contact No. : "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/viewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Occupation"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/contact"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="9398784154"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

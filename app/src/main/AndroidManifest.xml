@@ -9,17 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoApp">
-        <activity android:name=".ViewReportActivity"></activity>
-        <activity
-            android:name=".ReportListActivity"
-            android:windowSoftInputMode="stateHidden">
+        <activity android:name=".BmiCalcActivity"></activity>
+        <activity android:name=".updateProfileActivity">
+
+        </activity>
+        <activity android:name=".HealthReportActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ViewReportActivity" />
+        <activity
+            android:name=".ReportListActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
