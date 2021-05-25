@@ -70,6 +70,16 @@ public class HealthReportActivity extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference();
 
         userId = fAuth.getCurrentUser().getUid();
+        profileImage = findViewById(R.id.userImage);
+        StorageReference fileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
+        fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(profileImage);
+            }
+        });
+
+
 
         DocumentReference documentReference = fStore.collection("User").document(userId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
@@ -85,16 +95,10 @@ public class HealthReportActivity extends AppCompatActivity {
                 userOccupation.setText(documentSnapshot.getString("Occupation"));
             }
         });
-        profileImage = findViewById(R.id.userImage);
-        StorageReference fileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
-        fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                Picasso.get().load(uri).into(profileImage);
-            }
-        });
 
 
 
     }
+
+
 }

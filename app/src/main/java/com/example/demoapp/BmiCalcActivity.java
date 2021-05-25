@@ -3,6 +3,7 @@ package com.example.demoapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import static com.example.demoapp.BMICalcUtil.BMI_CATEGORY_HEALTHY;
 import static com.example.demoapp.BMICalcUtil.BMI_CATEGORY_OBESE;
@@ -98,5 +101,7 @@ public class BmiCalcActivity extends AppCompatActivity {
                break;
        }
 
+
     }
+
 }
