@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:id="@+id/userImage"
+            android:id="@+id/updateImage"
             android:src="@drawable/ic_upload_image"
             android:adjustViewBounds="true"/>
     </androidx.cardview.widget.CardView>

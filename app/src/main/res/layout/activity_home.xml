@@ -44,7 +44,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="150dp"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="5dp">
@@ -88,7 +88,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="150dp"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="5dp">
@@ -133,7 +133,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="150dp"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="5dp">
@@ -178,7 +178,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="150dp"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="5dp">
