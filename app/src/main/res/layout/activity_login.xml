@@ -26,7 +26,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:endIconMode="clear_text"
         android:background="@drawable/edittext_background"
         android:hint="@string/email"
         android:padding="12dp"
@@ -43,7 +42,6 @@
         android:padding="12dp"
         android:inputType="textPassword"
         android:maxLines="1"
-        app:endIconMode="password_toggle"
         android:textColor="@color/colorText" />
 
     <Button

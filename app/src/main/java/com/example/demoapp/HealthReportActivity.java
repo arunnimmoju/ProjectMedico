@@ -79,8 +79,6 @@ public class HealthReportActivity extends AppCompatActivity {
             }
         });
 
-
-
         DocumentReference documentReference = fStore.collection("User").document(userId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
@@ -95,9 +93,6 @@ public class HealthReportActivity extends AppCompatActivity {
                 userOccupation.setText(documentSnapshot.getString("Occupation"));
             }
         });
-
-
-
     }
 
 
